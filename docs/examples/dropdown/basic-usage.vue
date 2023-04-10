@@ -8,7 +8,17 @@
     </span>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
+        <el-dropdown-item>Action 
+        <el-popconfirm
+                         confirm-button-text="确定"
+                         cancel-button-text="取消"
+                         title="确认删除吗?"
+                         @confirm="deleteRow"
+                         >
+            <template #reference>
+              <el-button class="delColor">删除</el-button>
+            </template>
+          </el-popconfirm></el-dropdown-item>
         <el-dropdown-item>Action 2</el-dropdown-item>
         <el-dropdown-item>Action 3</el-dropdown-item>
         <el-dropdown-item disabled>Action 4</el-dropdown-item>
